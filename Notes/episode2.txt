@@ -1,0 +1,37 @@
+1. npm doesnot stands for node package manager it is just a package manager that has all the packages in it.
+
+2. Package.json is a configuration for npm.
+
+3. There are 2 types are dependencies we can install.
+    a. Dev dependency (-D)
+        it is used for development purpose.
+    b. Normal dependency
+        it is used for both development and production.
+
+4. Caret (^) in package.json:
+    It is used for automatically updating the minor updates along with patch updates.
+
+5. Tilde (~) in package.json: 
+
+    (**This can break the app sometimes as it updates even in major updates**)
+
+    It is used to match the most recent patch version. Tilde ~ notation freezes the major version and minor version. 
+    As we know patch updates are bug fixes that’s why we can say ~ notation allows us to automatically accept bug fixes. 
+
+6. Package lock.json: (Exact version of dependencies)
+    This is a lockfile that holds information on the dependencies or packages installed for a node. js project, including their exact version numbers.
+
+7. Package.json: (Aproximate version of dependencies)
+    This is the primary format for configuring and describing how to communicate with and execute your application.
+
+8. Node modules:
+    When we install a package using NPM all the code fetched for the package is stored in node modules.
+
+9. Node modules are very large due to transitive dependencies(one package needs other packages to run).
+
+10. NPM is used for installing the packages and NPX is used for executing the packages.
+
+11. CDN links are not the preferred way of bringing react and reactDOM into our project.Installing react using npm is the preffered way as
+    it will be included in the node modules and can be easily used in the project.
+
+12. During the build of parcel remove the main in package.json.
