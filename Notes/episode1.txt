@@ -1,0 +1,25 @@
+1.Content Delivery Network(CDN):
+    The CDN is used to speed up the webpages. The CDN works by caching content of the origin close to each end user.
+
+2. Cross Origin (or) CORS:
+    The cross origin resource sharing is the method of getting the resources for our website from a different domain. 
+    Without the CORS the other server will block the resources as it has same server policy.
+
+3. React element is an object which is rendered by the DOM.
+
+4. React only works in a part of the code. So it is called library rather than a framework.
+
+5. Emmet:
+    It is used to write html & css faster using simple abbrevations that are converted into code blocks.
+
+6. Difference between async & differ.
+
+    6.1 async:
+        With the use of async in the script tag the script will loaded along with the html parsing. Once the script is loaded, 
+        The html parshing will be paused & the script will be executed.
+
+        In simple words, The script will load with html & executed as soon as it is loaded.
+    
+    6.2 differ:
+        With the use of differ in the script tag the script will be loaded along with the html parshing & only executed after the completion 
+        of html parshing.
