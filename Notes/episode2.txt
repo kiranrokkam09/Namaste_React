@@ -35,3 +35,5 @@
     it will be included in the node modules and can be easily used in the project.
 
 12. During the build of parcel remove the main in package.json.
+
+13. parcel is a file bundler.

@@ -1,0 +1,12 @@
+1. npm start=npm run start(This does not work for build).
+2. JSX is not html in javascript, It is HTML like or XML like syntax.
+3. es6=ecmascript6
+4. babel converts the jsx code before it reaches the JS.
+5. JSX => Babel transpiles it to React.createElement => ReactElement- JS Object => HTMLElement(render)
+6. Attributes in JSX should be written in camel case.
+7. Two types of react components
+    7.1 Class Based components
+    7.2 Functional components
+8. A Component should start with a capital letter.
+9. Component Composition means adding or putting one component in another component.
+10. JSX prevents cross site scriptring attacks by santizing the data coming from the apis or in the curly brackets({ }).
