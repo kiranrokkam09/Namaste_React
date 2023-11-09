@@ -1,0 +1,12 @@
+1. props are the properties that are passed in json format to react component.
+
+2. Config Driven UI:
+        It is controlling the UI using the config or data from the backend.
+
+3. While looping using map function every item in the loop should be given a unique key.If the key is not given and once a new item is added,
+    the react will render all the items in the list again, but with the unique keys the react exactly knows the new item and only renders the
+    item this will give you a huge optimization.
+
+4. React itself recommends not to use indexes as key of the loops because order of the items may change.
+
+5. Not using key(Not acceptable) <<<<< using index as key <<<<<<<<<<<<< using unique id as key (Best Practice).
