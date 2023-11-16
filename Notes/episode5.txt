@@ -1,0 +1,28 @@
+1. Two types of Exports/Import
+
+    1.1 Default Export/Import
+
+        export default Component;
+        import Component from "path";
+
+    1.2 Named Export/Import
+
+        export const Component;
+        import {Component} from "path";
+
+2. Never keep Constant data inside a Component.
+
+3. React Hooks - Nothing but a simple javascript utility functions.
+
+    3.1 useState() - Creates state variable in react.
+
+    3.2 useEffect() - 
+
+4. Whenever a State variable updates the react will rerender it's components.
+
+5. Reconciliation(Whenever something changes is called conciliation) Algorithm (React fiber) (came in React 16)
+
+6. Virual DOM - Virtual DOM is representation of actual DOM.It is nothing but a normal javascript object.
+
+7. Diff Algorithm - Whenever there is a change in the component the react will check the difference between the newly created virtual dom
+    and the old virtual dom and then changes the actual dom.The react doesn't always touches the actual dom that is why react is faster.

@@ -10,3 +10,10 @@
 4. React itself recommends not to use indexes as key of the loops because order of the items may change.
 
 5. Not using key(Not acceptable) <<<<< using index as key <<<<<<<<<<<<< using unique id as key (Best Practice).
+
+6. resdata?.card.card.info: This expression is making use of the optional chaining operator (?.). It is used to access the card 
+    property of the resdata object. If resdata is null or undefined, the expression will short-circuit, and the result will be 
+    undefined. This helps avoid errors when trying to access nested properties on potentially null or undefined objects.
+
+7. {cloudinaryImageId, name, cuisines, avgRating, costForTwo}: This is a destructuring assignment. It is used to create 
+    variables with the same names as the properties being extracted from the object on the right-hand side (resdata?.card.card.info).

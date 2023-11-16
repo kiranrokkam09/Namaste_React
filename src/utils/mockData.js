@@ -1,6 +1,3 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client'
-
 const resList=[
     {
       "card": {
@@ -897,53 +894,4 @@ const resList=[
     }
   ]
 
-const RestaurantCard=(props)=>{
-    const {resdata}=props;
-    const {cloudinaryImageId,name,cuisines,avgRating,costForTwo}=resdata?.card.card.info
-    return(
-        <div className='res-card'>
-            <img className="res-logo" alt="res-logo" src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+cloudinaryImageId}/>
-            <h3>{name}</h3>
-            <h4>{cuisines.join(', ')}</h4>
-            <h4>{avgRating+" Stars"}</h4>
-            <h4>{costForTwo}</h4>
-        </div>
-    )
-}
-const Body=()=>{
-    return (<div className='body'>
-        <div className='search'>Search</div>
-        <div className='res-container'>
-            {
-                resList.map((restaurant) => (<RestaurantCard key={restaurant.card.card.info.id} resdata={restaurant}/>))
-            }
-
-        </div>
-    </div>)
-}
-const Header=()=>{
-    return (<div className='header'>
-        <div className='logocontainer'>
-            <img className="logo" src="https://www.crazycravings.ca/wp-content/uploads/2019/03/crazy-logo-revised-March-2018-300x300.png"/>
-        </div>
-        <div className='navlinks'>
-        <ul>
-            <li>Home</li>
-            <li>About us</li>
-            <li>Contact us</li>
-            <li>Cart</li>
-        </ul>
-        </div>
-    </div>)
-}
-
-const AppLayout=()=>{
-    return (<div className='app'>
-        <Header/>
-        <Body/>
-    </div>)
-}
-
-const root=ReactDOM.createRoot(document.getElementById('root'))
-
-root.render(<AppLayout/>)
+export default resList;
