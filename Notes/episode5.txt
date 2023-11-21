@@ -16,7 +16,9 @@
 
     3.1 useState() - Creates state variable in react.
 
-    3.2 useEffect() - 
+    3.2 useEffect() - The useEffect hook is a function in React that allows developers to perform side effects in a functional component. 
+    This can include things like data fetching, setting up subscriptions, responding to the component's lifecycle events, or updating 
+    the DOM in response to changes in state or props.
 
 4. Whenever a State variable updates the react will rerender it's components.
 

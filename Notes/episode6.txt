@@ -1,0 +1,14 @@
+1. There 2 types of architechures:
+    1.1 Monolith: All the project is done in a single file.
+    1.2 Micro Services: The project is done by using different different Services for different purposes.
+
+2. React render cycles are very fast.
+
+3. Shimmer UI: shimmer UI is a version of the UI that doesn't contain actual content, but instead mimics the layout 
+    and shapes of the content that will eventually appear.(Showing Fake UI or Skeleton until the actual page loads)
+
+4. Conditional rendering : Rendering on the basis of condition is called Conditional Rendering.
+
+5. Whenever a state variable updates, React triggers reconsiliation(Rerenders the component).
+
+pending: Cors video, map, filter video, Reconsiliation(React fiber) and dif theory.

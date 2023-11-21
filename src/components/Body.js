@@ -1,29 +1,64 @@
 import RestaurantCard from "./RestaurantCard";
-import { useState } from "react";
-import resList from "../utils/mockData";
+import { useState, useEffect } from "react";
+import Shimmer from "./Shimmer";
 
 const Body = () => {
-  const [restaurantList, setrestaurantList] = useState(resList);
-  return (
+  const [restaurantList, setrestaurantList] = useState([]);
+  const [filteredlist, setfilteredList] = useState([]);
+  const [searchInput, setSearchInput] = useState("");
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    const data = await fetch(
+      "https://www.zomato.com/webroutes/getPage?page_url=/visakhapatnam/restaurants?place_name=Visakhapatnam&dishv2_id=9055&category=1&location=&isMobile=0"
+    );
+    const json = await data.json();
+    setrestaurantList(json?.page_data?.sections?.SECTION_SEARCH_RESULT);
+    setfilteredList(json?.page_data?.sections?.SECTION_SEARCH_RESULT);
+  };
+
+  return restaurantList.length === 0 ? (
+    <Shimmer />
+  ) : (
     <div className="body">
-      <button
-        className="filter-btn"
-        onClick={() => {
-          const filteredlist = restaurantList.filter(
-            (res) => res.card.card.info.avgRating > 4
-          );
-          console.log(filteredlist);
-          setrestaurantList(filteredlist);
-        }}
-      >
-        Top Rated Restaurants
-      </button>
+      <div className="filters-box">
+        <input
+          className="searchbox"
+          value={searchInput}
+          onChange={(e) => {
+            setSearchInput(e.target.value);
+          }}
+        />
+        <button
+          className="searchbutton"
+          onClick={() => {
+            const searchlist = restaurantList.filter((res) =>
+              res.info.name.toLowerCase().includes(searchInput.toLowerCase())
+            );
+            setfilteredList(searchlist);
+          }}
+        >
+          Search
+        </button>
+        <button
+          className="filter-btn"
+          onClick={() => {
+            const filteredlist = restaurantList.filter(
+              (res) => res.info.rating.aggregate_rating > 4
+            );
+            setfilteredList(filteredlist);
+          }}
+        >
+          Top Rated Restaurants
+        </button>
+      </div>
+
       <div className="res-container">
-        {restaurantList.map((restaurant) => (
-          <RestaurantCard
-            key={restaurant.card.card.info.id}
-            resdata={restaurant}
-          />
+        {filteredlist.map((restaurant) => (
+          <RestaurantCard key={restaurant.info.resId} resdata={restaurant} />
         ))}
       </div>
     </div>
