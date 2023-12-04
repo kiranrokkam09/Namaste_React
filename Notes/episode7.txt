@@ -1,0 +1,40 @@
+1. If no dependency array => useEffect is called every component render.
+
+2. If dependency array is empty = [] => useEffect is called on initial render(Only once).
+
+3. For suppose dependency array is [btnName] => useEffect is called every time the btnName is updated.
+
+4. Never create state variables outside of the component.
+
+5. useState hook is used to create local state components inside a functional component.
+
+6. Always create useState hook at the starting of the component for good practice.
+
+7. Never create useState hook inside ifelse conditions or for loops or functions.
+
+8. *** rafce in vs will create your component. ***
+
+9. Never Use Anchor Tag <a/> in react. because the whole page reloads.
+
+10. In react Link component given by react-router-dom is used to redirect to pages.It just loads the components.
+
+11. 2 Types of routing in web apps
+    11.1 Client Side routing
+    11.2 Server Side routing
+
+12. for array destructring we use [] brackets.
+
+13. for javascript objects destructring we use {} brackets.
+
+14. useRouteError hook is used for detecting the type of the error.
+
+15. React router dom provides us the  createBrowserRouter for defining routes in react.
+
+16. React router dom provides us the RouterProvider for routing the routes in react.
+
+17. Outlet in react router dom for childrouting (write more when studying).
+
+18 . ":" is used for dynamic routing in react. example:"restaurants/:resid".
+
+
+pending: destructring video.

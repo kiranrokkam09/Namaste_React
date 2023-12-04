@@ -11,4 +11,4 @@
 
 5. Whenever a state variable updates, React triggers reconsiliation(Rerenders the component).
 
-pending: Cors video, map, filter video, Reconsiliation(React fiber) and dif theory.
+pending: map, filter video, Reconsiliation(React fiber) and dif theory.
