@@ -3,27 +3,16 @@ import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import useRestaurantList from "../utils/useRestaurantList";
 
 const Body = () => {
-  const [restaurantList, setrestaurantList] = useState([]);
-  const [filteredlist, setfilteredList] = useState([]);
   const [searchInput, setSearchInput] = useState("");
-
+  const [filteredlist, setfilteredList] = useState([]);
+  const restaurantList = useRestaurantList();
   useEffect(() => {
-    fetchData();
-  }, []);
-
-  const fetchData = async () => {
-    const data = await fetch(
-      "https://www.zomato.com/webroutes/getPage?page_url=/visakhapatnam/restaurants?place_name=Visakhapatnam&dishv2_id=9055&category=1&location=&isMobile=0"
-    );
-    const json = await data.json();
-    setrestaurantList(json?.page_data?.sections?.SECTION_SEARCH_RESULT);
-    setfilteredList(json?.page_data?.sections?.SECTION_SEARCH_RESULT);
-  };
-
+    setfilteredList(restaurantList);
+  }, [restaurantList]);
   const onlinestatus = useOnlineStatus();
-
   if (onlinestatus === false) {
     return <h1>Looks like you're offline!! Check Your Internet Connection.</h1>;
   }
@@ -63,7 +52,6 @@ const Body = () => {
           Top Rated Restaurants
         </button>
       </div>
-      {console.log(filteredlist)};
       <div className="res-container">
         {filteredlist.map((restaurant) => {
           const url = restaurant?.cardAction?.clickUrl.split("/")[2];
