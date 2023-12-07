@@ -3,5 +3,5 @@
     into small modules.
 3. for the modularity we use custom hooks.
 4. when defining the custom hooks use 'use' as the prefix to the name of the hook.
-5. Chuking (or) code splitting (or) dynamic bundling (or) lazy loading (or) on demand loading (or) dynamic 
+5. Chunking (or) code splitting (or) dynamic bundling (or) lazy loading (or) on demand loading (or) dynamic 
     import:- Making the application into smaller chunks.
