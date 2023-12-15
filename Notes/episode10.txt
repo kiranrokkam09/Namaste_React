@@ -1,0 +1,8 @@
+1. explain about sass and scss
+2. css
+3. styled components(many companies uses it)
+4. material ui(popular)
+5. bootstrap
+6. chakra css
+7. ant design
+8. tailwindcss

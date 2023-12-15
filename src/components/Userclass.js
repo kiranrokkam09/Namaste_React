@@ -6,9 +6,7 @@ class Userclass extends React.Component {
     this.state = {};
   }
 
-  componentDidMount() {
-    console.log("Component Mounted");
-  }
+  componentDidMount() {}
 
   render() {
     const { name, education } = this.props;

@@ -1,0 +1,14 @@
+1. Higher order components are someting that takes component as input and returns component as output.
+2. Higher order components are used for enhancing the components and returning them.
+3. controlled and uncontrolled components
+4. Lifting the state up: 
+    Sometimes, you want the state of two components to always change together. To do it, remove state from both of them,
+    move it to their closest common parent, and then pass it down to them via props. This is known as lifting state up,
+    and it's one of the most common things you will do writing React code. 
+5. Props Drilling
+6. React Context
+7. createContext, useContext
+8. "<{your context}.Provider value={{your value}}></{ypur content}.Provider>" this is how we change the value
+    of the context.the above provider will be wrapped on the entire app component.
+9. We can also pass functions inside the context.
+10. Difference between context and redux toolkit.
